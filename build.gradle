@@ -35,9 +35,14 @@ dependencies {
     implementation('org.projectlombok:lombok')
     testImplementation ('org.projectlombok:lombok')
 
+    annotationProcessor('org.projectlombok:lombok') //롬복 인식오류로 인해 어노테이션프로세서 추가
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
     implementation ('org.springframework.boot:spring-boot-starter-mustache')
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    implementation('org.springframework.session:spring-session-jdbc')
+
+    testImplementation ('org.springframework.security:spring-security-test')
 //    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
 //    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
